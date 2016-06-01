@@ -84,6 +84,10 @@ describe('Guidestar', function(){
         var query = [{ organization_name: 'dallas' }];
         return expect(this.guidestar.search(query)).to.eventually.be.an('object');
       });
+      it('should throw an error on a bad_search_name', function(){
+        var query = [{ bad_search_name: 'dallas' }];
+        return expect(() => this.guidestar.search(query)).to.throw(/is not an allowed search field/);
+      });
     })
   });
 })
