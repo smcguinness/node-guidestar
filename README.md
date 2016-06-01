@@ -46,7 +46,7 @@ __**Note:**__ Guidestar allows authentication via username and password, however
 # API
 **Important** - All methods return a promise containing json. You'll need to catch and handle any errors.
 
-# Charity Check
+## Charity Check
 Search by string value representing EIN number.
 ```javascript
 var ein = '54-1774039';
