@@ -20,7 +20,7 @@ describe('Guidestar', function(){
       });
       it('should allow for an API Key to be passed in for authentication', function(){
         var ein = '54-1774039';
-        return expect(this.guidestar.charityCheck(ein, { charityCheckAPIKey: config.charityCheckAPIKey })).to.be.a('promise');
+        return expect(this.guidestar.charityCheck(ein, { key: config.charityCheckAPIKey })).to.be.a('promise');
       });
       it('should eventually return an object', function(){
         var ein = '54-1774039';
@@ -34,7 +34,7 @@ describe('Guidestar', function(){
       });
       it('should allow for an API Key to be passed in for authentication', function(){
         var orgId = '7831216';
-        return expect(this.guidestar.detail(orgId, { detailAPIKey: config.detailAPIKey })).to.be.a('promise');
+        return expect(this.guidestar.detail(orgId, { key: config.detailAPIKey })).to.be.a('promise');
       });
       it('should eventually return an object', function(){
         var orgId = '7831216';
@@ -48,7 +48,7 @@ describe('Guidestar', function(){
       });
       it('should allow for an API Key to be passed in for authentication', function(){
         var orgId = '7831216';
-        return expect(this.guidestar.exchange(orgId, { exchangeAPIKey: config.exchangeAPIKey })).to.be.a('promise');
+        return expect(this.guidestar.exchange(orgId, { key: config.exchangeAPIKey })).to.be.a('promise');
       });
       it('should eventually return an object', function(){
         var orgId = '7831216';
@@ -78,7 +78,7 @@ describe('Guidestar', function(){
       });
       it('should allow for an API Key to be passed in for authentication', function(){
         var query = [{ organization_name: 'dallas' }];
-        return expect(this.guidestar.search(query, { searchAPIKey: config.searchAPIKey })).to.be.a('promise');
+        return expect(this.guidestar.search(query, { key: config.searchAPIKey })).to.be.a('promise');
       });
       it('should eventually return an object', function(){
         var query = [{ organization_name: 'dallas' }];
