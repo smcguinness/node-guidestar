@@ -8,6 +8,8 @@ npm install --save node-guidestar
 # Usage
 ```javascript
 var Guidestar = require('node-guidestar');
+var options = {...}
+var guidestar = new Guidestar(options);
 ```
 
 # Authentication
@@ -43,6 +45,13 @@ __**Note:**__ Guidestar allows authentication via username and password, however
 
 # API
 **Important** - All methods return a promise containing json. You'll need to catch and handle any errors.
+
+# Charity Check
+Search by string value representing EIN number.
+```javascript
+var ein = '54-1774039';
+guidestar.charityCheck(ein).then(function(json){ res.json(json) });
+```
 
 ## Search
 Guidestar search is powered by Lucene, which allows for robust querys to be written. At this time full text, parameterized, and AND/OR queries are supported.
@@ -80,7 +89,7 @@ guidestar.search(query).then(function(json){ res.json(json) });
 * revocation
 * online_giving_flag
 
-**Note** - An rrror is thrown on any field not in the above list.
+**Note** - An error is thrown on any field not in the above list.
 
 ### And Operator Search [array(object(key:value),object(key:value)...)]
 ```javascript
@@ -91,4 +100,18 @@ guidestar.search(query).then(function(json){ res.json(json) });
 ```javascript
 var query = { city: ['dallas', 'ft. worth'] };
 guidestar.search(query).then(function(json){ res.json(json) });
+```
+
+# Details
+Search by string value representing the Guide Star organization_id.
+```javascript
+var orgId = '54-1774039';
+guidestar.details(orgId).then(function(json){ res.json(json) });
+```
+
+# Exchange
+Search by string value representing the Guide Star organization_id.
+```javascript
+var orgId = '54-1774039';
+guidestar.exchange(orgId).then(function(json){ res.json(json) });
 ```
