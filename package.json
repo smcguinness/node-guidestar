@@ -1,0 +1,33 @@
+{
+  "name": "node-guidestar",
+  "version": "0.0.1",
+  "description": "An API wrapper for the Guidestar API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smcguinness/node-guidestar.git"
+  },
+  "author": "Seth McGuinness",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smcguinness/node-guidestar/issues"
+  },
+  "homepage": "https://github.com/smcguinness/node-guidestar#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "eslint": "^2.11.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^18.1.0",
+    "load-grunt-tasks": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "lucene-query-generator": "^0.2.0",
+    "node-fetch": "^1.5.3"
+  }
+}
