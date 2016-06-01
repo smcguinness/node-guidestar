@@ -73,7 +73,7 @@ describe('Guidestar', function(){
         return expect(this.guidestar.search(query)).to.be.a('promise');
       });
       it('should perform OR operations', function(){
-        var query = [{ city: ['dallas', 'ft. worth'] }];
+        var query = { city: ['dallas', 'ft. worth'] };
         return expect(this.guidestar.search(query)).to.be.a('promise');
       });
       it('should allow for an API Key to be passed in for authentication', function(){
