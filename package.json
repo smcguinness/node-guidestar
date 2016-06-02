@@ -1,6 +1,6 @@
 {
   "name": "node-guidestar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An API wrapper for the Guidestar API.",
   "main": "index.js",
   "scripts": {
